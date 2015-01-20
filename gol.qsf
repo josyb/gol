@@ -1,0 +1,61 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2012 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 32-bit
+# Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Full Version
+# Date created = 15:01:33  October 22, 2012
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		gol_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "MAX 10"
+set_global_assignment -name DEVICE 10M50DCF256A7G
+set_global_assignment -name TOP_LEVEL_ENTITY gol
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "12.0 SP2"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:01:33  OCTOBER 22, 2012"
+set_global_assignment -name LAST_QUARTUS_VERSION 14.1.0
+set_global_assignment -name VHDL_FILE gol.vhd
+set_global_assignment -name EDA_SIMULATION_TOOL "<None>"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT NONE -section_id eda_simulation
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY "C:\\qdesigns\\jb\\gol\\output"
+set_global_assignment -name SAVE_DISK_SPACE OFF
+set_global_assignment -name SMART_RECOMPILE ON
+set_global_assignment -name ALLOW_POWER_UP_DONT_CARE OFF
+set_global_assignment -name SYNTH_TIMING_DRIVEN_SYNTHESIS ON
+set_global_assignment -name VHDL_INPUT_VERSION VHDL_2008
+set_global_assignment -name VHDL_SHOW_LMF_MAPPING_MESSAGES OFF
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP "-40"
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 125
+set_global_assignment -name SDC_FILE gol.sdc
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
