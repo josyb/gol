@@ -132,9 +132,8 @@ begin
 
 
 	-- the CA decision process is common for all 'load/monitor' methods
-	process( statep , 	NeighbourN , NeighbourNE , NeighbourE ,
-						NeighbourSE , NeighbourS ,
-						NeighbourSW , NeighbourW , NeighbourNW
+	process( statep , 	NeighbourN , NeighbourNE , NeighbourE ,	NeighbourSE , 
+						NeighbourS , NeighbourSW , NeighbourW , NeighbourNW
 			)
 			variable	sum	: natural range 0 to 8 ;
 		begin
@@ -233,19 +232,19 @@ begin
 					SEvolve 	=> Step,
 					SShift 		=> ShiftOrRotate ,
 
-					NeighbourNW => states((VERTICAL + j + 1) mod VERTICAL	, (HORIZONTAL + i - 1) mod HORIZONTAL),
 					NeighbourN 	=> states((VERTICAL + j + 1) mod VERTICAL	, i),
 					NeighbourNE => states((VERTICAL + j + 1) mod VERTICAL	, (HORIZONTAL + i + 1) mod HORIZONTAL),
+					NeighbourSE => states((VERTICAL + j - 1) mod VERTICAL	, (HORIZONTAL + i + 1) mod HORIZONTAL),
 
-					NeighbourSW => states((VERTICAL + j - 1) mod VERTICAL	, (HORIZONTAL + i - 1) mod HORIZONTAL),
 					NeighbourS 	=> ternary( j = 0,
 											ternary( LoadnotRotate = '0' , states(VERTICAL - 1 , i) , to_gol_states( loadreg(i) ) ),
 											states((VERTICAL + j - 1) mod VERTICAL , i)
 										  ),
-					NeighbourSE => states((VERTICAL + j - 1) mod VERTICAL	, (HORIZONTAL + i + 1) mod HORIZONTAL),
+					NeighbourSW => states((VERTICAL + j - 1) mod VERTICAL	, (HORIZONTAL + i - 1) mod HORIZONTAL),
 
 					NeighbourE 	=> states(j									, (HORIZONTAL + i + 1) mod HORIZONTAL),
 					NeighbourW 	=> states(j									, (HORIZONTAL + i - 1) mod HORIZONTAL),
+					NeighbourNW => states((VERTICAL + j + 1) mod VERTICAL	, (HORIZONTAL + i - 1) mod HORIZONTAL),
 
 					State 		=> states(j	, i)
 
