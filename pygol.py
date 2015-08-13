@@ -188,7 +188,7 @@ def pygol( HORIZONTAL , VERTICAL, Clk, Reset,
 
     if USE_2D:
 #         states     = [[myhdl.Signal( gol_states.DEAD ) for _ in range( HORIZONTAL )] for __ in range(VERTICAL)]
-        states = myhdl.Array( (VERTICAL, HORIZONTAL), gol_states.DEAD)
+        states = myhdl.Array( (VERTICAL, HORIZONTAL), myhdl.Signal(gol_states.DEAD) )
         
         cells      = [[None for _ in range(HORIZONTAL)] for __ in range(VERTICAL)]
 
